@@ -1,0 +1,42 @@
+.card {
+  &__image-container {
+    position: relative;
+    width: 100%;
+    .btn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 75%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    .btn {
+      visibility: hidden;
+      opacity: 0.6;
+    }
+  }
+  .card__subtitle{
+    color: #6d6d6d;
+  }
+}
+
+.card:hover{
+  .card__title, .card__subtitle {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .card__image-container {
+    color: #434242;
+    opacity: 0.6;
+  }
+  .btn {
+      visibility: visible;
+    }
+  }
+
+::ng-deep .mat-button-wrapper {
+  padding: 0 !important;
+}
+

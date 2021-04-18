@@ -1,0 +1,11 @@
+<h2 class="header">Your Featured Playlists</h2>
+<div *ngIf="featuredPlaylists$ | async as featuredPlaylists" class="container">
+    <app-playlist-card
+      class="playlist"
+      *ngFor="let featuredPlaylist of featuredPlaylists"
+      [title]="featuredPlaylist.name"
+      [imgUrl]="featuredPlaylist.artwork"
+      [curator]="featuredPlaylist.curator_name"
+      (clickEvent)="goToPlaylist(featuredPlaylist.url)"
+    ></app-playlist-card>
+</div>

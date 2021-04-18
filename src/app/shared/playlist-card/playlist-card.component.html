@@ -1,0 +1,15 @@
+<mat-card class="card">
+  <div class="card__image-container">
+    <img mat-card-image [src]="imgUrl">
+    <button mat-fab class="btn" (click)="onClick()"><mat-icon>play_arrow</mat-icon>
+    </button>
+  </div>
+  <mat-card-content>
+   <div class="card__title" (click)="onClick()">
+     {{title}}
+   </div>
+    <div class="card__subtitle" (click)="onClick()">
+      {{curator}}
+    </div>
+  </mat-card-content>
+</mat-card>
